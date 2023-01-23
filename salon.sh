@@ -13,23 +13,6 @@ SERVICES_LIST(){
   done
 }
 
-#SERVICES_MENU(){
-#  if [[ $1 ]]
-#  then
-#    echo -e "\n$1"
-#  fi
-#  SERVICES_LIST
-#  read SERVICE_ID_SELECTED
-#  case $SERVICE_ID_SELECTED in
-#    1) ;;
-#    2) ;;
-#3   3) ;;
-#    4) ;;
-#    5) ;;
-#    *) SERVICES_MENU "Please enter a valid option." ;;
-#  esac
-#}
-
 SERVICES_MENU(){
   if [[ $1 ]]
   then
