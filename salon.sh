@@ -36,7 +36,7 @@ SERVICES_MENU(){
       read CUSTOMER_NAME
       INSERT_NEW_CUSTOMER=$($PSQL "INSERT INTO customers(phone, name) VALUES('$CUSTOMER_PHONE', '$CUSTOMER_NAME')")
     fi
-    #FORMATED_NAME=echo $CUSTOMER_NAME | sed -r 's/^ *| *$//g'
+    
     echo -e "\nWhat time would you like your cut, $(echo $CUSTOMER_NAME | sed -r 's/^ *| *$//g')?"
     read SERVICE_TIME
     CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone='$CUSTOMER_PHONE'")
